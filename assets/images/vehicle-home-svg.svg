@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+  <defs>
+    <filter id="Path_1230" x="0" y="0" width="95" height="95" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#44a0a9" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1124" data-name="Group 1124" transform="translate(-304 -26)">
+    <g transform="matrix(1, 0, 0, 1, 304, 26)" filter="url(#Path_1230)">
+      <path id="Path_1230-2" data-name="Path 1230" d="M17.5,0A17.5,17.5,0,1,1,0,17.5,17.5,17.5,0,0,1,17.5,0Z" transform="translate(27 27)" fill="#d9feff"/>
+    </g>
+    <g id="Group_1123" data-name="Group 1123" transform="translate(-8)">
+      <path id="car-svgrepo-com" d="M3,7.032,4.969,8.674a.723.723,0,0,0,.463.168h8.159a.723.723,0,0,0,.463-.168l1.969-1.641M5.532,11.374H5.54m7.952,0H13.5M6.734,4.5H12.29a1.447,1.447,0,0,1,1.256.729l2.1,3.668a2.9,2.9,0,0,1,.381,1.436v4.3a.724.724,0,0,1-.724.724h-.724a.724.724,0,0,1-.724-.724v-.724H5.171v.724a.724.724,0,0,1-.724.724H3.724A.724.724,0,0,1,3,14.63v-4.3A2.894,2.894,0,0,1,3.381,8.9l2.1-3.668A1.447,1.447,0,0,1,6.734,4.5Zm-.84,6.874a.362.362,0,1,1-.362-.362A.362.362,0,0,1,5.894,11.374Zm7.959,0a.362.362,0,1,1-.362-.362A.362.362,0,0,1,13.854,11.374Z" transform="translate(347.476 60.573)" fill="none" stroke="#44a0a9" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_1227" data-name="Path 1227" d="M15,3.835h1.835m0,0H18.67m-1.835,0V5.67m0-1.835V2" transform="translate(346.641 57.691)" fill="none" stroke="#44a0a9" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

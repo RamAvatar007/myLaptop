@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "713301111045",
+    "project_id": "quickly-design",
+    "storage_bucket": "quickly-design.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713301111045:android:528f73f4281211f203c76c",
+        "android_client_info": {
+          "package_name": "com.example.new_quickly_desige"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAId7v5yPchu4EwS3icqM7pmQxzuyAc0t8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
