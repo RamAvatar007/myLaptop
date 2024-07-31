@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:new_quickly_desige/helper/custom_sizebox.dart';
 import 'package:provider/provider.dart';
@@ -7,8 +9,9 @@ import '../../../constant/common_text.dart';
 import '../../../constant/font_style.dart';
 import '../../../constant/mq_constant.dart';
 import '../../../main.dart';
-import '../address_screen/manage_address/select_address_screen/widgets/header_screen.dart';
 import '../all_product/cart_provider/cart_provider.dart';
+import 'widgets/apply_coupon.dart';
+import 'widgets/header.dart';
 
 class PaymentMethodScreen extends StatefulWidget {
   const PaymentMethodScreen({super.key});
@@ -18,6 +21,9 @@ class PaymentMethodScreen extends StatefulWidget {
 }
 
 class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
+  List radioButtonValue = ["Cash on Delivery","Credit & Debit Card","More Payment Options"];
+
+  String groupValues = "Cash on Delivery";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,24 +102,54 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-          const  Header(),
+            const HeaderOne(),
             mqHeight20.ph,
-            Container(
-              width: double.infinity,
-              height: 160,
-              color: secondaryColor,
-              padding: EdgeInsets.symmetric(horizontal: mqWidth15,vertical: mqHeight20),
-              child: Column(
-                children: [
-                  CommonText(text: "Apply Coupon", fontSize: fo15, fontWeight: f600, fontColor: blackColor),
-                  mqWidth5.ph,
-                  Row(
+           const ApplyCoupon(),
+            mqHeight20.ph,
+            Column(
+              children: List.generate(3, (index) {
+                return Container(
+                  padding: EdgeInsets.symmetric(horizontal: mqWidth15),
+                  margin: EdgeInsets.symmetric(horizontal: mqWidth15,vertical: 8),
+                  height: mqHeight40,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: groupValues == radioButtonValue[index] ? secondaryColor : whiteColor,
+                    borderRadius: BorderRadius.circular(10),
+                   
+                    boxShadow: const [
+                      BoxShadow(color: Color(0xff44a0a933),blurRadius: 6,
+                      offset: Offset(3, 3)),
+                    ]
+                  ),
+                  child: Row(
                     children: [
-
+                      SizedBox(
+                        width: 15,
+                        height: 15,
+                        child: Radio(
+                          activeColor: primaryColor,
+                          fillColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+                            return primaryColor;
+                          }),
+                            value: radioButtonValue[index],
+                          groupValue: groupValues,
+                          onChanged: (value) {
+                              setState(() {
+                                groupValues = value!;
+                              });
+                            },),
+                      ),
+                      mqWidth15.pw,
+                  index == 0 ? const Icon(Icons.wallet) :const  Icon(Icons.payment_outlined),
+                      mqWidth15.pw,
+                      CommonText(text: radioButtonValue[index], fontSize: fo15, fontWeight: f500, fontColor: blackColor)
+                     ,const Spacer(),
+                    index == 0 ? const SizedBox() :  Icon(Icons.keyboard_arrow_down_outlined,color: primaryColor,size: 28,)
                     ],
-                  )
-                ],
-              ),
+                  ),
+                );
+              },),
             )
           ],
         ),

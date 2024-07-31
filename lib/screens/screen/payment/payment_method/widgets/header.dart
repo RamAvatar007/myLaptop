@@ -5,8 +5,8 @@ import '../../../../constant/common_text.dart';
 import '../../../../constant/font_style.dart';
 import '../../../../constant/mq_constant.dart';
 
-class Header extends StatelessWidget {
-  const Header({
+class HeaderOne extends StatelessWidget {
+  const HeaderOne({
     super.key,
   });
 
